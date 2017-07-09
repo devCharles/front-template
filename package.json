@@ -1,0 +1,37 @@
+{
+  "name": "bulma-test",
+  "version": "1.0.0",
+  "description": "bulma test",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack",
+    "test": "test"
+  },
+  "babel": {
+    "presets": [
+      [
+        "env",
+        {
+          "targets": {
+            "browsers": [
+              "last 3 versions",
+              "ie >= 10"
+            ]
+          }
+        }
+      ]
+    ]
+  },
+  "author": "devCharles",
+  "license": "MIT",
+  "dependencies": {
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.1",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-env": "^1.6.0",
+    "bulma": "^0.4.3",
+    "style-loader": "^0.18.2",
+    "webpack": "^3.1.0",
+    "webpack-dev-server": "^2.5.1"
+  }
+}
