@@ -1,7 +1,12 @@
+const webpack = require('webpack')
+const path = require('path')
+const name = require('./package.json').name + '.js'
+
 module.exports = {
-  entry: './js/index.js',
+  entry: './src/js/index.js',
   output: {
-    filename: 'bundle.js'
+    path: path.resolve(__dirname, 'dist'),
+    filename: name
   },
   devServer: {
     host: "0.0.0.0",
@@ -30,8 +35,16 @@ module.exports = {
               options: {
                 sourceMap: true
               }
+            },{
+              loader: 'sass-loader',
+              options: {
+                sourceMap: true
+              }
             }
           ]
+      },{
+        test: /\.html$/,
+        use: 'html-loader'
       }
     ]
   }
